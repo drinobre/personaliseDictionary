@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+@media (min-width: 800px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: blue ;
+  }
+
+  .form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 16px;
+  }
+
+  .form-message,
+  .form-button {
+    grid-column: 1 / 2; /* let them take the full width*/
+  }
+}
+
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="output">
+            <input type="text" id="inputField" placeholder="add user name here"/>
+            <button id="get-users-by-name">Search database</button>
+            <button id="get-users-by-API">Search API</button>
+            <h2 id="name"></h2>
+            <p id="game_played"></p>
+            <p id="score"></p>
+          </div>
+        <form class="form-wrapper">
+            <input type="text" class="form-message" >a
+            <input type="text" class="form-message" >b
+            <textarea class="form-message">c
+        </form>
+   </div>
+</body>
+</html>

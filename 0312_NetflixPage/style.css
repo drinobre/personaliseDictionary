@@ -1,0 +1,89 @@
+:root{
+    --sectionPadding: 60px;
+    --sameSectionPadding: 40px;
+    --primaryTextColor: white;
+    --backgroundColor:black;
+    --margin-right: 5%;
+    --margin-left: 5%;
+  
+}
+
+.navbar-left{
+    /* display:inherit; Doesn't work - Why*/
+    justify-content: flex-start;
+    /* align-items: center; Doesn't work - Why*/
+    /* margin-left: var(--margin-left);  */
+    /* background-color: aqua;  Visual test to determine the impact of each part of the CSS */
+    color: var(--primaryTextColor);
+    background: var(--backgroundColor);
+    flex-direction: row;
+    
+}
+
+.navbar-right{
+    /* display:inherit; Doesn't work - Why*/
+    justify-content: flex-end;
+    /* align-items: center; Doesn't work - Why*/
+    /* margin-right: var(--margin-right);  */
+    color: var(--primaryTextColor);
+    /* background-color: rgb(255, 0, 76); Visual test to determine the impact of each part of the CSS */
+    background: var(--backgroundColor);
+       
+}
+
+.navbar-main{
+    display: flex;
+    justify-content: space-between;
+    color: blue;
+    align-items: center;
+    margin-left: var(--margin-left); 
+    margin-right: var(--margin-right); 
+}
+
+header{
+    /* background-color: chartreuse; Visual test to determine the impact of each part of the CSS */
+    color: var(--primaryTextColor);
+    background: var(--backgroundColor);
+}
+
+.navbar-logo{
+    height: 90px;
+    background-color: greenyellow;
+}
+
+h3{
+    color: var(--primaryTextColor);
+    margin-left: var(--margin-left); 
+    background: var(--backgroundColor);
+}
+
+.top-picks{
+    /* display:grid; */
+    /* grid-template-columns: auto; */
+    background-color: black;
+    margin-left: var(--margin-left); 
+    margin-right: var(--margin-right); 
+    /* justify-content: space-around; */
+    /* padding-top: var(--sectionPadding); */
+    padding-bottom: var(--sameSectionPadding);
+}
+
+/* Why the justify-content: space-around is not working for the div */
+/* .film-image{
+    margin-left:1.5%;
+    margin-right:1.5%;
+    border-radius: 10%;
+} */
+
+#container{
+    display: grid;
+    /* grid-template-columns: repeat(6, 12.5%); */
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-rows: 20% 20% 20% 20% 20% 20%; */
+    margin-left: var(--margin-left); 
+    margin-right: var(--margin-right); 
+    /* background-color: brown; Visual test to determine the impact of each part of the CSS */
+    background: var(--backgroundColor);
+
+
+}

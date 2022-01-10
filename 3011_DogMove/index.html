@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      :root {
+        --x: 100px;
+        --y: 100px;
+      }
+
+      #dog {
+        width: 200px;
+        top: var(--y);
+        left: var(--x);
+        transform: translate(-50%, -50%);
+        transition: all 0.3s;
+        position: relative;
+      }
+
+    </style>
+  </head>
+  <body>
+    <img id="dog" src="dog.png" />
+
+    <script>
+    
+    // add event lister to the whole document
+    const root = document.documentElement;
+    root.addEventListener("keydown",moveDog);
+    
+  
+     
+    // variable speed
+    const speed = 100;
+    
+   // swith case for arrow u and down (x,y) 
+   
+   function moveDog (){
+    // variables x and y - use the getComputedStyle / get PropertyValue
+      let xValue = getComputedStyle(root).getPropertyValue("--x");
+     xValue = Number(xValue.slice(0, -2)); // remove the "px" of the string to show as a number 
+     console.log(xValue);
+     
+     let yValue = getComputedStyle(root).getPropertyValue("--y");
+     yValue = Number(yValue.slice(0, -2)); 
+     console.log(yValue); 
+
+      switch (event.key) {
+        case "ArrowRight": root.style.setProperty("--x", xValue + speed + "px");            
+            break;
+        case "ArrowLeft": root.style.setProperty("--x", xValue - speed + "px");            
+            break;
+        case "ArrowDown": root.style.setProperty("--y", yValue + speed + "px");            
+            break;
+        case "ArrowUp": root.style.setProperty("--y", yValue - speed + "px");            
+            break;
+    }
+    console.log(moveDog);    
+}
+
+    </script>
+  </body>
+</html>
+
+
+
+ 
